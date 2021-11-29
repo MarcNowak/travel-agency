@@ -32,7 +32,10 @@ export default function reducer(statePart = [], action = {}) {
       };
     
       case ADD_TAG:
-        return [...statePart, action.payload];      
+        return {
+        ...statePart, 
+        tag: action.payload,
+      };
 
       case CHANGE_DURATION:
         return {

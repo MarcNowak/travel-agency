@@ -3,11 +3,14 @@ import PropTypes from 'prop-types';
 import styles from './TripListOptions.module.scss';
 
 import {Row, Col} from 'react-flexbox-grid';
+// import { changeDuration } from '../../../redux/filtersRedux';
 
 class TripListOptions extends React.Component {
   handleTags(tag, checked){
     if(checked) {
       console.log('Adding tag', tag);
+      this.props.addingTag(tag);
+      
       // TODO - use action dispatcher from props
     } else {
       console.log('Removing tag', tag);
@@ -17,7 +20,7 @@ class TripListOptions extends React.Component {
 
   handleDuration(type, value){
     console.log('Changing duration', type, value);
-    // TODO - use action dispatcher from props
+    this.props.changeDuration(type, value);
   }
 
   handleSearch(phrase){
