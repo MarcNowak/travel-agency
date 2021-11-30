@@ -12,13 +12,13 @@ export const getFilteredTrips = ({trips, filters}) => {
   }
 
   // DONE - filter by duration
-  if(filters.byDuration){
-    output = output.filter(trip => (trip.days <= filters.byDuration.to && trip.days >= filters.byDuration.from));
-  }
+  // if(filters.duration){
+    output = output.filter(trip => (trip.days <= filters.duration.to && trip.days >= filters.duration.from));
+  // }
 
   // DONE - filter by tags
-  if(filters.byTags){
-    output = output.filter(trip => filters.byTags.every(tag => trip.byTags.includes(tag)));
+  if(filters.tags.length){
+    output = output.filter(trip => filters.tags.every(tag => trip.tags.includes(tag)));
   }
 
   // TODO - sort by cost descending (most expensive goes first)
