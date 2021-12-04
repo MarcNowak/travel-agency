@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import styles from './CountrySummary.module.scss';
 import SideImage from '../../common/SideImage/SideImage';
 import DetailsBox from '../../common/DetailsBox/DetailsBox';
 import DetailsImage from '../../common/DetailsImage/DetailsImage';
 import List from '../../common/List/List';
 import ListItem from '../../common/ListItem/ListItem';
-import {Row, Col} from 'react-flexbox-grid';
+import { Row, Col } from 'react-flexbox-grid';
 
-const CountrySummary = ({alpha3Code, name, flag, trips, region, subregion, languages, capital}) => (
+const CountrySummary = ({ alpha3Code, name, flag, trips, region, subregion, languages, capital }) => (
 
   <Col xs={12}>
     <Link to={`/country/${alpha3Code}`} className={styles.component}>

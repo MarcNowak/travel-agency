@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './DetailsImage.module.scss';
 
-const DetailsImage = ({variant = '', children, ...otherProps}) => (
+const DetailsImage = ({ variant = '', children, ...otherProps }) => (
   <div {...otherProps} className={styles.component + variant.split(' ').map(name => ' ' + (styles[name] || name)).join('')}>
     {children}
   </div>

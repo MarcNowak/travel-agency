@@ -2,15 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './TripListOptions.module.scss';
 
-import {Row, Col} from 'react-flexbox-grid';
+import { Row, Col } from 'react-flexbox-grid';
 // import { changeDuration } from '../../../redux/filtersRedux';
 
 class TripListOptions extends React.Component {
-  handleTags(tag, checked){
-    if(checked) {
+  handleTags(tag, checked) {
+    if (checked) {
       console.log('Adding tag', tag);
       this.props.addingTag(tag);
-      
+
       // TODO - use action dispatcher from props
     } else {
       console.log('Removing tag', tag);
@@ -18,17 +18,17 @@ class TripListOptions extends React.Component {
     }
   }
 
-  handleDuration(type, value){
+  handleDuration(type, value) {
     console.log('Changing duration', type, value);
     this.props.changeDuration(type, value);
   }
 
-  handleSearch(phrase){
+  handleSearch(phrase) {
     this.props.changeSearchPhrase(phrase);
   }
 
-  render(){
-    const {tags, filters} = this.props;
+  render() {
+    const { tags, filters } = this.props;
     return (
       <div className={styles.component}>
         <Row around="lg">

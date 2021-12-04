@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import Section from '../../layout/Section/Section';
 import CountrySummary from '../../features/CountrySummary/CountrySummary';
 import PageTitle from '../../common/PageTitle/PageTitle';
-import {Grid, Row} from 'react-flexbox-grid';
+import { Grid, Row } from 'react-flexbox-grid';
 
-const Countries = ({countries}) => (
+const Countries = ({ countries }) => (
   <Section>
     <Grid>
       <PageTitle text='All countries' />

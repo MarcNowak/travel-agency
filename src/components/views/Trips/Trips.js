@@ -5,10 +5,10 @@ import TripSummary from '../../features/TripSummary/TripSummary';
 import Section from '../../layout/Section/Section';
 import PageTitle from '../../common/PageTitle/PageTitle';
 
-import {Grid, Row, Col} from 'react-flexbox-grid';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 import TripListOptions from '../../features/TripListOptions/TripListOptionsContainer';
 
-const Trips = ({trips}) => (
+const Trips = ({ trips }) => (
   <Section>
     <Grid>
       <Row>

@@ -5,9 +5,9 @@ import PageTitle from '../../common/PageTitle/PageTitle';
 import CountrySummary from '../../features/CountrySummary/CountrySummary';
 
 import styles from './Regions.module.scss';
-import {Grid, Row} from 'react-flexbox-grid';
+import { Grid, Row } from 'react-flexbox-grid';
 
-const Regions = ({regions, subregions, countries}) => (
+const Regions = ({ regions, subregions, countries }) => (
 
   <Section>
     <Grid>
