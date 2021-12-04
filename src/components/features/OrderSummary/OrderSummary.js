@@ -12,7 +12,7 @@ const OrderSummary = (props) => {
         Total:
         <strong>
           {formatPrice(
-            calculateTotal(props.tripCost.tripCost, props.tripCost.options)
+            calculateTotal(props.tripCost, props.options)
           )}
         </strong>
       </h2>
@@ -21,8 +21,8 @@ const OrderSummary = (props) => {
 };
 
 OrderSummary.propTypes = {
-  tripCost: PropTypes.node,
-  options: PropTypes.node,
+  tripCost: PropTypes.string,
+  options: PropTypes.object,
 };
 
 export default OrderSummary;
