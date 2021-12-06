@@ -2,7 +2,7 @@ import React from 'react';
 import OrderSummary from '../OrderSummary/OrderSummary';
 import OrderOption from '../OrderOption/OrderOption';
 import { Grid, Row, Col } from 'react-flexbox-grid';
-import pricing from '../data/pricing.json';
+import pricing from '../../../data/pricing.json';
 
 const OrderForm = ({ tripCost, pricing, id}) => {
   return (
