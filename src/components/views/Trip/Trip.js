@@ -72,7 +72,7 @@ const Trip = ({ error, name, image, cost, days, description, country, intro, pri
         <Row>
           <Col xs={12}>
             <PageTitle text='Trip options' />
-            <OrderForm tripCost={cost} pricing={pricing}/>
+            <OrderForm tripCost={cost} />
           </Col>
         </Row>
       </Grid>

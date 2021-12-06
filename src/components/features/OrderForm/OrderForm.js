@@ -4,7 +4,7 @@ import OrderOption from '../OrderOption/OrderOption';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import pricing from '../../../data/pricing.json';
 
-const OrderForm = ({ tripCost, pricing, id}) => {
+const OrderForm = ({ tripCost, id}) => {
   return (
     <Grid>
       <Row>
