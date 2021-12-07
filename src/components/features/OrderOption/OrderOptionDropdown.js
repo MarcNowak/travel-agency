@@ -1,7 +1,8 @@
 import React from 'react';
 import styles from './OrderOption.module.scss';
+import { formatPrice } from '../../../utils/formatPrice';
 
-const OrderOptionDropdown = ({values, required, currentValue, setOptionValue, formatPrice}) => (
+const OrderOptionDropdown = ({ values, required, currentValue, setOptionValue }) => (
   <select
     className={styles.dropdown}
     value={currentValue}
