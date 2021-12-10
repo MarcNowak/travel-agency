@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './OrderOption.module.scss';
 import Icon from '../../common/Icon/Icon';
 import { formatPrice } from '../../../utils/formatPrice';
+import PropTypes from 'prop-types';
 
 const OrderOptionIcon = ({ values, required, setOptionValue, currentValue }) => {
   return (
@@ -28,4 +29,10 @@ const OrderOptionIcon = ({ values, required, setOptionValue, currentValue }) => 
   );
 };
 
+OrderOptionIcon.propTypes = {
+  values: PropTypes.object,
+  required: PropTypes.object,
+  setOptionValue: PropTypes.object,
+  currentValue: PropTypes.object,
+};
 export default OrderOptionIcon;
