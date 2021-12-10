@@ -23,10 +23,10 @@ const OrderForm = ({ tripCost, options, setOrderOption }) => {
 };
 
 OrderForm.propTypes = {
-  tripCost: PropTypes.object,
+  tripCost: PropTypes.string,
   tripOptions: PropTypes.object,
   options: PropTypes.object,
-  setOrderOption: PropTypes.object,
+  setOrderOption: PropTypes.func,
 };
 
 export default OrderForm;

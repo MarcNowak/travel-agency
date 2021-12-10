@@ -17,7 +17,7 @@ const OrderOptionDate = ({setOptionValue, startDate}) => {
 OrderOptionDate.propTypes = {
   selected: PropTypes.object,
   onChange: PropTypes.object,
-  setOptionValue: PropTypes.object,
+  setOptionValue: PropTypes.func,
   startDate: PropTypes.object,
 };
 

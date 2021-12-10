@@ -88,7 +88,7 @@ Trip.propTypes = {
   description: PropTypes.string,
   country: PropTypes.object,
   error: PropTypes.string,
-  intro: PropTypes.object,
+  intro: PropTypes.string,
 };
 
 export default Trip;

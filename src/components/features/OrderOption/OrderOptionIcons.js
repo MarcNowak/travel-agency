@@ -30,9 +30,9 @@ const OrderOptionIcon = ({ values, required, setOptionValue, currentValue }) => 
 };
 
 OrderOptionIcon.propTypes = {
-  values: PropTypes.object,
-  required: PropTypes.object,
-  setOptionValue: PropTypes.object,
-  currentValue: PropTypes.object,
+  values: PropTypes.array,
+  required: PropTypes.func,
+  setOptionValue: PropTypes.func,
+  currentValue: PropTypes.string,
 };
 export default OrderOptionIcon;
