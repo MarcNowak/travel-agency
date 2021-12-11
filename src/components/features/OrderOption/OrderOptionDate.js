@@ -18,7 +18,7 @@ OrderOptionDate.propTypes = {
   selected: PropTypes.object,
   onChange: PropTypes.object,
   setOptionValue: PropTypes.func,
-  currentValue: PropTypes.date,
+  currentValue: PropTypes.any,
 };
 
 export default OrderOptionDate;

@@ -20,7 +20,7 @@ const OrderOptionNumber = ({ currentValue, setOptionValue, price, limits }) => {
 };
 
 OrderOptionNumber.propTypes = {
-  currentValue: PropTypes.number,
+  currentValue: PropTypes.string,
   setOptionValue: PropTypes.func,
   price: PropTypes.string,
   limits: PropTypes.object,
