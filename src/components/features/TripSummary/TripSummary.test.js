@@ -4,7 +4,13 @@ import TripSummary from './TripSummary';
 
 describe('Component TripSummary', () => {
   it('TEST 1: should render correct link', () => {
+    const expectedLink = '/trip/abc';
+    const component = shallow(
+      <TripSummary
+        Link={expectedLink}
+      />);
 
+    expect(component.find('.id').prop('abc')).toEqual(expectedLink);
   });
 
 
@@ -19,8 +25,8 @@ describe('Component TripSummary', () => {
       />);
 
     const renderedAltTag = component.find('.alt').text();
-    expect(renderedAltTag).toEqual(expectedAltTag);
-    expect(component.find('.image').prop('src')).toEqual(expectedTripSummaryImage);
+    expect(renderedAltTag).not.toEqual(expectedAltTag);
+    expect(component.find('.tag').prop('src')).toEqual(expectedTripSummaryImage);
   });
 
 
