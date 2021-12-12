@@ -16,11 +16,55 @@ describe('Component OrderOption', () => {
 
   it('TEST 9: should render correct title', () => {
     const OrderOptionExpectedTitle = 'Lorem ipsum';
-    const ExpectedType = 'OrderOptionExpectedType';
-    const component = shallow(<OrderOption name={OrderOptionExpectedTitle} type={ExpectedType} />);
+    const expectedType = 'text';
+    const component = shallow(<OrderOption name={OrderOptionExpectedTitle} type={expectedType} />);
 
     const OrderOptionRenderedTitle = component.find('.title').text();
     expect(OrderOptionRenderedTitle).toEqual(OrderOptionExpectedTitle);
 
   });
 });
+
+
+const optionTypes = {
+  dropdown: 'OrderOptionDropdown',
+  icons: 'OrderOptionIcons',
+  checkboxes: 'OrderOptionCheckboxes',
+  number: 'OrderOptionNumber',
+  text: 'OrderOptionText',
+  date: 'OrderOptionDate',
+};
+
+for (let type in optionTypes) {
+  describe(`Component OrderOption with type=${type}`, () => {
+    /* test setup */
+    let component;
+    let subcomponent;
+    let renderedSubcomponent;
+
+    beforeEach(() => {
+      component = shallow(
+        <OrderOption
+          type={type}
+        />,
+      );
+      subcomponent = component.find(optionTypes[type]);
+      renderedSubcomponent = subcomponent.dive();
+    });
+
+
+    /* common tests */
+    it('passes dummy test', () => {
+      expect(1).toBe(1);
+      console.log(component.debug());
+    });
+
+    /* type-specific tests */
+    switch (type) {
+      case 'dropdown': {
+        /* tests for dropdown */
+        break;
+      }
+    }
+  });
+}
