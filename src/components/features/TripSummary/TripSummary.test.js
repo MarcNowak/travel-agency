@@ -7,10 +7,12 @@ describe('Component TripSummary', () => {
     const expectedLink = '/trip/abc';
     const component = shallow(
       <TripSummary
-        Link={expectedLink}
+        id={'abc'}
+        image={'name'}
+
       />);
 
-    expect(component.find('.id').prop('abc')).toEqual(expectedLink);
+    expect(component.find('.link').prop('to')).toEqual(expectedLink);
   });
 
 
@@ -20,13 +22,16 @@ describe('Component TripSummary', () => {
     const expectedTripSummaryImage = 'TripSummary.jpg';
     const component = shallow(
       <TripSummary
-        imageAlt={expectedAltTag}
-        imageSrc={expectedTripSummaryImage}
+        name={expectedAltTag}
+        image={expectedTripSummaryImage}
+
       />);
 
-    const renderedAltTag = component.find('.alt').text();
-    expect(renderedAltTag).not.toEqual(expectedAltTag);
-    expect(component.find('.tag').prop('src')).toEqual(expectedTripSummaryImage);
+    expect(component.find('img').prop('src', 'alt')).toEqual(expectedTripSummaryImage, expectedAltTag);
+
+    // const renderedAltTag = component.find('.alt').text();
+    // expect(renderedAltTag).not.toEqual(expectedAltTag);
+    // expect(component.find('.tag').prop('src')).toEqual(expectedTripSummaryImage);
   });
 
 
@@ -34,9 +39,9 @@ describe('Component TripSummary', () => {
   it('TEST 3: should render without crashing', () => {
     const component = shallow(
       <TripSummary
-        name='TripSummary name props Name Ipsum'
+        image='TripSummary name props Name Ipsum'
         cost='TripSummary cost props Cost Ipsum'
-        days='TripSummary days props Days Ipsum'
+        days={123}
       />);
     expect(component).toBeTruthy();
     console.log(component.debug());
@@ -51,12 +56,27 @@ describe('Component TripSummary', () => {
 
 
   it('TEST 5: should submit 3 tags to TripSummary component', () => {
+    const expectedTags = ['tag1', 'tag2', 'tag3'];
+    const component = shallow(
+      <TripSummary
+        name='TripSummary name props Name Ipsum'
+        tags={expectedTags}
+      />);
 
+    expect(component.find('.tag').at(0).text()).toEqual(expectedTags[0]);
+    expect(component.find('.tag').at(1).text()).toEqual(expectedTags[1]);
+    expect(component.find('.tag').at(2).text()).toEqual(expectedTags[2]);
   });
 
 
 
   it('TEST 6: should not generate div className=tags if prop tags is false or empty', () => {
 
+    const component = shallow(
+      <TripSummary
+        name='TripSummary name props Name Ipsum'
+      />);
+
+    expect(component.find('.tags').exists()).toEqual(false);
   });
 });
