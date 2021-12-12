@@ -3,7 +3,7 @@ import { shallow } from 'enzyme';
 import OrderOption from './OrderOption';
 
 describe('Component OrderOption', () => {
-  it('TEST 7: should render without crasing', () => {
+  it('TEST 7: should render without crashing', () => {
     const component = shallow(<OrderOption type='Type Lorem ipsum' name='Name Lorem ipsum' />);
     expect(component).toBeTruthy();
     console.log(component.debug());
@@ -16,7 +16,8 @@ describe('Component OrderOption', () => {
 
   it('TEST 9: should render correct title', () => {
     const OrderOptionExpectedTitle = 'Lorem ipsum';
-    const component = shallow(<OrderOption name={OrderOptionExpectedTitle} />);
+    const ExpectedType = 'OrderOptionExpectedType';
+    const component = shallow(<OrderOption name={OrderOptionExpectedTitle} type={ExpectedType} />);
 
     const OrderOptionRenderedTitle = component.find('.title').text();
     expect(OrderOptionRenderedTitle).toEqual(OrderOptionExpectedTitle);
