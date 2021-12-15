@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import OrderOption from './OrderOption';
 import DatePicker from 'react-datepicker';
-import Icon from './OrderOptionIcons';
+import Icon from '../../common/Icon/Icon';
 
 describe('Component OrderOption', () => {
   it('TEST 7: should render without crashing', () => {
@@ -132,7 +132,7 @@ for (let type in optionTypes) {
       }
 
       case 'icons': {
-        it('TEST 13: contains div o klasie icon', () => {
+        it('TEST 13: contains div icon class', () => {
           const icons = renderedSubcomponent.find(Icon);
           expect(icons).toBeTruthy();
           expect(icons.length).toBe(3);
@@ -150,14 +150,23 @@ for (let type in optionTypes) {
 
       case 'checkboxes': {
         it('TEST 15: contains div and label', () => {
-
+          const checkboxesDiv = renderedSubcomponent.find('div');
+          const checkboxes = renderedSubcomponent.find('checkbox');
+          const checkboxesDivToBe = renderedSubcomponent.find('div');
+          const checkboxesLabel = renderedSubcomponent.find('label');
+                    
+          expect(checkboxesDiv).toBeTruthy();
+          expect(checkboxes).toBeTruthy();
+          expect(checkboxesDivToBe.length).toBe(1);
+          expect(checkboxesLabel).toBeTruthy();
+        
         });
 
         it('TEST 16: should run setOrderOption function on change', () => {
           renderedSubcomponent.find('input[value="' + testValue + '"]').simulate('change', { currentTarget: { checked: true } });
-          // wuszukuje inputa o konkrentnym VALUE
+          // wyszukuje inputa o konkrentnym VALUE
           expect(mockSetOrderOption).toBeCalledTimes(1);
-          expect(mockSetOrderOption).toBeCalledWith({ [mockProps.id]: [mockProps.id, testValue] });
+          expect(mockSetOrderOption).toBeCalledWith({ [mockProps.id]: [mockProps.currentValue, testValue] });
 
         });
         break;
@@ -165,6 +174,11 @@ for (let type in optionTypes) {
 
       case 'number': {
         it('TEST 17: contains div and input', () => {
+          const div = renderedSubcomponent.find('div');
+          const divInput = renderedSubcomponent.find('input');
+
+          expect(div).toBeTruthy();
+          expect(divInput).toBeTruthy();
 
         });
 
@@ -178,6 +192,8 @@ for (let type in optionTypes) {
 
       case 'text': {
         it('TEST 19: contains input', () => {
+          const icons = renderedSubcomponent.find('input');
+          expect(icons).toBeTruthy();
 
         });
 
