@@ -9,7 +9,7 @@ import { calculateTotal } from '../../../utils/calculateTotal';
 import settings from '../../../data/settings';
 import Button from '../../common/Button/Button';
 
-const sendOrder = (tripCost, countryName, options, tripId, tripName) => {
+const sendOrder = ({tripCost, countryName, options, tripId, tripName}) => {
   const totalCost = formatPrice(calculateTotal(tripCost, options));
   const payload = {
     ...options,
@@ -73,13 +73,7 @@ OrderForm.propTypes = {
   setOrderOption: PropTypes.func,
   tripId: PropTypes.string,
   tripName: PropTypes.string,
-};
-
-OrderForm.propTypes = {
   tripCost: PropTypes.string,
-  tripOptions: PropTypes.object,
-  options: PropTypes.object,
-  setOrderOption: PropTypes.func,
 };
 
 export default OrderForm;
