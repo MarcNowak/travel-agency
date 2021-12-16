@@ -136,7 +136,7 @@ for (let type in optionTypes) {
           const icons = renderedSubcomponent.find(Icon);
           expect(icons).toBeTruthy();
           expect(icons.length).toBe(3);
-         
+
         });
 
         it('TEST 14: should run setOrderOption function on change', () => {
@@ -154,12 +154,12 @@ for (let type in optionTypes) {
           const checkboxes = renderedSubcomponent.find('checkbox');
           const checkboxesDivToBe = renderedSubcomponent.find('div');
           const checkboxesLabel = renderedSubcomponent.find('label');
-                    
+
           expect(checkboxesDiv).toBeTruthy();
           expect(checkboxes).toBeTruthy();
           expect(checkboxesDivToBe.length).toBe(1);
           expect(checkboxesLabel).toBeTruthy();
-        
+
         });
 
         it('TEST 16: should run setOrderOption function on change', () => {
@@ -209,8 +209,7 @@ for (let type in optionTypes) {
         it('TEST 21: contains datePicker', () => {
           const datePicker = renderedSubcomponent.find(DatePicker);
           expect(datePicker).toBeTruthy();
-          expect(datePicker.length).toBe(1); 
-          
+          expect(datePicker.length).toBe(1);
 
         });
 

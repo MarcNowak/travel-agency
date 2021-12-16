@@ -1,0 +1,81 @@
+{
+  "orders": [
+    {
+      "car-rental": "full",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": 0,
+      "name": "",
+      "contact": "",
+      "start-date": "2021-12-21T23:00:00.000Z",
+      "totalCost": "$51,481",
+      "id": 1
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": 0,
+      "name": "",
+      "contact": "",
+      "start-date": "2021-12-21T23:00:00.000Z",
+      "totalCost": "$51,481",
+      "id": 2
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": 0,
+      "name": "",
+      "contact": "",
+      "start-date": "2021-12-21T23:00:00.000Z",
+      "totalCost": "$51,481",
+      "id": 3
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": 0,
+      "name": "",
+      "contact": "",
+      "start-date": "2021-12-21T23:00:00.000Z",
+      "totalCost": "$51,481",
+      "id": 4
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "hotel",
+      "features": [],
+      "adults": 1,
+      "children": 0,
+      "name": "",
+      "contact": "",
+      "start-date": "2021-12-21T23:00:00.000Z",
+      "totalCost": "$51,481",
+      "id": 5
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "house",
+      "features": [
+        "security",
+        "pool",
+        "kitchen",
+        "all-inclusive"
+      ],
+      "adults": 2,
+      "children": 1,
+      "name": "cxg ccg ",
+      "contact": " xgfn   cb",
+      "start-date": "2022-01-23T23:00:00.000Z",
+      "totalCost": "$140,452",
+      "id": 6
+    }
+  ]
+}
