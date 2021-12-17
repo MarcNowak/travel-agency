@@ -76,6 +76,69 @@
       "start-date": "2022-01-23T23:00:00.000Z",
       "totalCost": "$140,452",
       "id": 6
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "suite",
+      "features": [
+        "kitchen"
+      ],
+      "adults": 1,
+      "children": 0,
+      "name": "ertg",
+      "contact": "er",
+      "start-date": "2021-12-29T23:00:00.000Z",
+      "totalCost": "$52,481",
+      "id": 7
+    },
+    {
+      "car-rental": "suv",
+      "accommodation": "house",
+      "features": [
+        "kitchen",
+        "security",
+        "pool",
+        "kitchen",
+        "all-inclusive"
+      ],
+      "adults": 1,
+      "children": 0,
+      "name": "Edek z Krainy Kredek",
+      "contact": "123456789",
+      "start-date": "2021-12-31T23:00:00.000Z",
+      "totalCost": "$119,436",
+      "id": 8
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "house",
+      "features": [
+        "all-inclusive",
+        "kitchen"
+      ],
+      "adults": 2,
+      "children": 4,
+      "name": "Czesiek",
+      "contact": "987654321",
+      "start-date": "2022-03-02T23:00:00.000Z",
+      "totalCost": "$212,723",
+      "id": 9
+    },
+    {
+      "car-rental": "full",
+      "accommodation": "suite",
+      "features": [
+        "all-inclusive",
+        "kitchen",
+        "security"
+      ],
+      "adults": 4,
+      "children": 6,
+      "name": "Mietek",
+      "contact": "147852369",
+      "start-date": "2022-03-17T23:00:00.000Z",
+      "totalCost": "$180,418",
+      "id": 10
     }
   ]
 }
