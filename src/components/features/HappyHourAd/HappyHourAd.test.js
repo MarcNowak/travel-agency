@@ -14,7 +14,7 @@ const mockProps = {
 
 describe('Component HappyHourAd', () => {
 
-  it('TEST 23: should render without crasing', () => {
+  it('TEST 23: should render without crashing', () => {
     const component = shallow(<HappyHourAd />);
     // do stałej 'component' przypisujemy funkcję renderującą 'shallow'
     // testowo renderujemy komponent HappyHourAd
@@ -40,9 +40,39 @@ describe('Component HappyHourAd', () => {
     const component = shallow(<HappyHourAd {...mockProps} />);
 
     expect(component.find(select.title).text()).toEqual(mockProps.title);
-    console.log(component.debug());
   
   });
+});
 
+const trueDate = Date;
+const mockDate = customDate => class extends Date {
+  constructor(...args) {
+    if(args.length){
+      super(...args);
+    } else {
+      super(customDate);
+    }
+    return this;
+  }
+  static now(){
+    return (new Date(customDate)).getTime();
+  }
+};
 
+const checkDescriptionAtTime = (time, expectedDescription) => {
+  it(`TEST 26: should show correct at ${time}`, () => {
+    global.Date = mockDate(`2019-05-14T${time}.135Z`);
+
+    const component = shallow(<HappyHourAd {...mockProps} />);
+    const renderedTime = component.find(select.descr).text();
+    expect(renderedTime).toEqual(expectedDescription);
+
+    global.Date = trueDate;
+  });
+};
+
+describe('Component HappyHourAd with mocked Date', () => {
+  checkDescriptionAtTime('11:57:58', '122');
+  checkDescriptionAtTime('11:59:59', '1');
+  checkDescriptionAtTime('13:00:00', 23 * 60 * 60 + '');
 });
