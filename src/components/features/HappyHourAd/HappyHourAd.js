@@ -4,6 +4,8 @@ const HappyHourAd = () => {
   return (
     <div>
       <HappyHourAd />
+      <h3 className='title' />
+      <div className='promoDescription' />
     </div>
   );
 };
