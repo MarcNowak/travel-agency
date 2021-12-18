@@ -7,6 +7,11 @@ const select = {
   promoDescription: '.promoDescription',
 };
 
+const mockProps = {
+  title: 'Header Title Lorem Ipsum',
+  promoDescription: 'Promo Description Lorem Ipsum',
+};
+
 describe('Component HappyHourAd', () => {
 
   it('TEST 23: should render without crasing', () => {
@@ -30,4 +35,14 @@ describe('Component HappyHourAd', () => {
     // sprawdzamy czy wyrenderowany element z obiektu select o wartości .promoDescription istnieje
 
   });
+
+  it('TEST 25: render correct header title', () => {
+    const component = shallow(<HappyHourAd {...mockProps} />);
+
+    expect(component.find(select.title).text()).toEqual(mockProps.title);
+    console.log(component.debug());
+  
+  });
+
+
 });
