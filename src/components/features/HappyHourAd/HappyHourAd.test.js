@@ -21,8 +21,13 @@ describe('Component HappyHourAd', () => {
 
   it('TEST 24: contains H3 title and Promo Description', () => {
     const component = shallow(<HappyHourAd />);
+    // do stałej 'component' przypisujemy funkcję renderującą 'shallow'
+
     expect(component.exists(select.title)).toEqual(true);
+    // sprawdzamy czy wyrenderowany element z obiektu select o wartości .title istnieje
+
     expect(component.exists(select.promoDescription)).toEqual(true);
+    // sprawdzamy czy wyrenderowany element z obiektu select o wartości .promoDescription istnieje
 
   });
 });
