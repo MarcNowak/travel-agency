@@ -19,7 +19,7 @@ describe('Component HappyHourAd', () => {
 
   });
 
-  it('TEST 24: contains H3 title and Div Countdown', () => {
+  it('TEST 24: contains H3 title and Promo Description', () => {
     const component = shallow(<HappyHourAd />);
     expect(component.exists(select.title)).toEqual(true);
     expect(component.exists(select.promoDescription)).toEqual(true);
