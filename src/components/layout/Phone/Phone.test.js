@@ -3,16 +3,12 @@ import { shallow } from 'enzyme';
 import Phone from './Phone';
 
 const select = {
-  nameOne: '.nameOne',
-  nameTwo: '.nameTwo',
-  nameThree: '.nameThree',
+  name: '.name',
 };
 
-// const mockPrps = {
-//   nameOne: 'Amanda, 678.243.8455',
-//   nameTwo: 'Tobias, 278.443.6443',
-//   nameThree: 'Helena, 167.280.3970',
-// };
+const mockProps = {
+  name: '8:00 - 12:00 - Amanda, 678.243.8455',
+};
 
 describe('Component Phone', () => {
 
@@ -23,13 +19,16 @@ describe('Component Phone', () => {
 
   });
 
-  it('TEST 101: contains name', () => {
+  it('TEST 101: should contain name', () => {
     const component = shallow(<Phone />);
-
-    expect(component.exists(select.nameOne)).toEqual(true);
-    expect(component.exists(select.nameTwo)).toEqual(true);
-    expect(component.exists(select.nameThree)).toEqual(true);
+    expect(component.exists(select.name)).toEqual(true);
 
   });
 
+  it('TEST 102: should contain correct name', () => {
+    const component = shallow(<Phone {...mockProps} />);
+
+    expect(component.find(select.name).text()).toEqual(mockProps.name);
+  });
+  
 });
